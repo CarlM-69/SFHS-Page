@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>SFHS | Home</title>
+
+		<style>
+			body {
+				background: url("./Resources/Images/background.png") no-repeat;
+				background-size: cover;
+				margin: 0vh;
+			}
+
+			/* header */
+
+			.nav img#sfhs_logo {
+				margin: 4vh 6vh;
+				height: 17vh;
+				width: 17vh;
+				cursor: default;
+			}
+	
+			.nav ul {
+				list-style-type: none;
+				float: right;
+				margin-top: 8vh;
+				margin-right: 5vh;
+				overflow: hidden;
+			}
+	
+			.nav li {
+				display: inline;
+				font-family: "Tahoma", sans-serif;
+				font-size: 3vh;
+				padding-right: 5vh;
+			}
+
+			.nav :not(li.active) a {
+				color: antiquewhite;
+				text-decoration: none;
+			}
+
+			.nav :not(li.active) a:hover {
+				color: rgb(243, 177, 92);
+			}
+	
+			.nav li.active {
+				color: rgb(181, 162, 138);
+				font-size: 4vh;
+				font-weight: bolder;
+				cursor: default;
+			}
+
+			/* body 1 */
+
+			.info {
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<img id="sfhs_logo" src="./Resources/Images/sfhs_logo.png" alt="sfhs_logo">
+			<ul>
+				<li class="active">HOME</li>
+				<li><a href="./src/Enroll.html">ENROLL</a></li>
+				<li><a href="./src/News.html">NEWS</a></li>
+				<li><a href="./src/Contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+		<div class="info">
+
+		</div>
+	</body>
+</html>
