@@ -5,6 +5,36 @@
 		<title>SFHS | Home</title>
 
 		<style>
+			@font-face {
+				font-family: "OpenSans-Light";
+				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Light.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-Regular";
+				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Regular.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-Medium";
+				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Medium.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-Bold";
+				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Bold.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-SemiBold";
+				src: url("./Resources/Fonts/OpenSans/static/OpenSans-SemiBold.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-ExtraBold";
+				src: url("./Resources/Fonts/OpenSans/static/OpenSans-ExtraBold.ttf");
+			}
+
 			body {
 				background: url("./Resources/Images/background.png") no-repeat center fixed;
 				background-size: cover;
@@ -50,6 +80,10 @@
 				width: 80%;
 			}
 
+			.section:nth-child(1) .nav .nav-bar .sfhs-beside-logo {
+				cursor: default;
+			}
+
 			.section:nth-child(1) .nav .nav-bar {
 				flex: 90%;
 				display: flex;
@@ -60,27 +94,26 @@
 			.section:nth-child(1) .nav .nav-bar p {
 				flex: 30%;
 				color: antiquewhite;
-				font-family: "Tahoma", sans-serif;
+				font-family: "OpenSans-ExtraBold", sans-serif;
 				font-size: 3vh;
-				font-weight: bolder;
 			}
 
 			.section:nth-child(1) .nav .nav-bar ul {
 				list-style-type: none;
-				align-self: flex-end center;
-				overflow: hidden;
+				align-self: center;
 			}
 
 			.section:nth-child(1) .nav .nav-bar ul li {
 				display: inline;
 				padding-right: 5vh;
-				font-family: "Tahoma", sans-serif;
+				font-family: "OpenSans-Medium", sans-serif;
 				font-size: 3vh;
 			}
 
 			.section:nth-child(1) .nav .nav-bar :not(li.active) a {
 				color: antiquewhite;
 				text-decoration: none;
+				transition: color 0.3s;
 			}
 
 			.section:nth-child(1) .nav .nav-bar :not(li.active) a:hover {
@@ -90,20 +123,74 @@
 			.section:nth-child(1) .nav .nav-bar li.active {
 				color: rgb(181, 162, 138);
 				font-size: 4vh;
-				font-weight: bolder;
+				font-family: "OpenSans-ExtraBold", sans-serif;
 				cursor: default;
+			}
+
+			.section:nth-child(1) .header {
+				margin-top: 35vh;
+				margin-left: 10vh;
+				display: flex;
+				flex-direction: column;
+				cursor: default;
+			}
+
+			.section:nth-child(1) .header .main-header p {
+				display: inline;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 5.5vh;
+				color: antiquewhite;
+			}
+
+			.section:nth-child(1) .header .main-header p.target {
+				color: transparent;
+				-webkit-text-stroke: 0.2vh green;
+				transition: all 0.3s;
+			}
+
+			.section:nth-child(1) .header .main-header p.target:hover {
+				color: antiquewhite;
+				-webkit-text-stroke: 0vh antiquewhite;
+			}
+
+			.section:nth-child(1) .header .main-description p {
+				font-family: "OpenSans-Regular", sans-serif;
+				font-size: 2vh;
+				color: antiquewhite;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="container">
-			<div class="section">
-				<div class="nav">
-					<div class="logo">
+		<!--
+			Currently, we're at the home page of the website.
+
+			locations:
+				./Main								- where all the pages stored in
+						./Main/Enroll.html			- the enroll page
+						./Main/News.html			- news and updates from the school page
+						./Main/Contact.html			- where all contact info of the school is displayed
+				./Resources							- all resources of the pages are stored in, like images, videos, fonts, and more
+						./Resources/Images			- this is where the images are stored
+
+
+			classes:
+				container 							- the placeholder for all sections
+				section								- parts of the page (we are using pseudo classes to divide each parts without making new classes)
+				nav									- contains logo and navigation bar
+				header								- catchy phrase line from the landing page
+
+				sfhs-beside-logo					- changes the cursor to default when hovering in the text
+				active								- sets the nav button as active button (disables the user from clicking that button we are currently in).
+				target								- changes the text style of the catchy phrase line header
+		-->
+		<div class="container"> <!-- sections placeholder -->
+			<div class="section"> <!-- section 1 -->
+				<div class="nav"> <!-- navigation div -->
+					<div class="logo"> <!-- logo -->
 						<img src="./Resources/Images/sfhs_logo.png" alt="SFHS Logo">
 					</div>
-					<div class="nav-bar">
-						<p>SAN FRANCISCO<br>HIGH SCHOOL</p>
+					<div class="nav-bar"> <!-- navigation bar -->
+						<p class="sfhs-beside-logo">SAN FRANCISCO<br>HIGH SCHOOL</p>
 
 						<ul>
 							<li class="active">HOME</li>
@@ -111,6 +198,17 @@
 							<li><a href="./Main/News.html">NEWS</a></li>
 							<li><a href="./Main/Contact.html">CONTACT</a></li>
 						</ul>
+					</div>
+				</div>
+
+				<div class="header"> <!-- headers -->
+					<div class="main-header"> <!-- header title -->
+						<p>WE </p>
+						<p class="target">TEACH </p>
+						<p> NEW GENERATIONS</p>
+					</div>
+					<div class="main-description"> <!-- header description -->
+						<p>Hahahaha</p>
 					</div>
 				</div>
 			</div>
