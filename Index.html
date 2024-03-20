@@ -6,18 +6,119 @@
 
 		<style>
 			body {
-				background: url("./Resources/Images/background.png") no-repeat;
+				background: url("./Resources/Images/background.png") no-repeat center fixed;
 				background-size: cover;
+			}
+
+			.container {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+			}
+
+			.section:nth-child(1) {
+				height: 100vh;
+				width: 100%;
+			}
+
+			.section:nth-child(2) {
+				background: orange;
+				height: 100vh;
+				width: 100%;
+			}
+
+			.section:nth-child(3) {
+				background: pink;
+				height: 100vh;
+				width: 100%;
+			}
+
+			.section:nth-child(1) .nav {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			.section:nth-child(1) .nav .logo {
+				flex: 10%;
+				margin-top: 3vh;
+				margin-left: 3vh;
+			}
+
+			.section:nth-child(1) .nav .logo img {
+				height: 80%;
+				width: 80%;
+			}
+
+			.section:nth-child(1) .nav .nav-bar {
+				flex: 90%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			.section:nth-child(1) .nav .nav-bar p {
+				flex: 30%;
+				color: antiquewhite;
+				font-family: "Tahoma", sans-serif;
+				font-size: 3vh;
+				font-weight: bolder;
+			}
+
+			.section:nth-child(1) .nav .nav-bar ul {
+				list-style-type: none;
+				align-self: flex-end center;
+				overflow: hidden;
+			}
+
+			.section:nth-child(1) .nav .nav-bar ul li {
+				display: inline;
+				padding-right: 5vh;
+				font-family: "Tahoma", sans-serif;
+				font-size: 3vh;
+			}
+
+			.section:nth-child(1) .nav .nav-bar :not(li.active) a {
+				color: antiquewhite;
+				text-decoration: none;
+			}
+
+			.section:nth-child(1) .nav .nav-bar :not(li.active) a:hover {
+				color: rgb(243, 177, 92);
+			}
+
+			.section:nth-child(1) .nav .nav-bar li.active {
+				color: rgb(181, 162, 138);
+				font-size: 4vh;
+				font-weight: bolder;
+				cursor: default;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<div class="section 1">
+			<div class="section">
+				<div class="nav">
+					<div class="logo">
+						<img src="./Resources/Images/sfhs_logo.png" alt="SFHS Logo">
+					</div>
+					<div class="nav-bar">
+						<p>SAN FRANCISCO<br>HIGH SCHOOL</p>
 
+						<ul>
+							<li class="active">HOME</li>
+							<li><a href="./Main/Enroll.html">ENROLL</a></li>
+							<li><a href="./Main/News.html">NEWS</a></li>
+							<li><a href="./Main/Contact.html">CONTACT</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="section 2">
-				
+			<div class="section">
+				<p>hi</p>
+			</div>
+			<div class="section">
+				<p>wew</p>
 			</div>
 		</div>
 	</body>
