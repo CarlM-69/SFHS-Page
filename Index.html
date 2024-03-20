@@ -63,6 +63,10 @@
 				width: 100%;
 			}
 
+
+			/* SECTION 1 ------------------------------------------ */
+
+
 			.section:nth-child(1) .nav {
 				display: flex;
 				flex-direction: row;
@@ -78,10 +82,12 @@
 			.section:nth-child(1) .nav .logo img {
 				height: 80%;
 				width: 80%;
+				user-select: none;
 			}
 
 			.section:nth-child(1) .nav .nav-bar .sfhs-beside-logo {
 				cursor: default;
+				user-select: none;
 			}
 
 			.section:nth-child(1) .nav .nav-bar {
@@ -102,6 +108,7 @@
 				list-style-type: none;
 				align-self: center;
 				cursor: default;
+				user-select: none;
 			}
 
 			.section:nth-child(1) .nav .nav-bar ul li {
@@ -109,6 +116,7 @@
 				padding-right: 5vh;
 				font-family: "OpenSans-Medium", sans-serif;
 				font-size: 3vh;
+				user-select: none;
 			}
 
 			.section:nth-child(1) .nav .nav-bar :not(li.active) a {
@@ -141,6 +149,8 @@
 				font-family: "OpenSans-ExtraBold", sans-serif;
 				font-size: 5.5vh;
 				color: antiquewhite;
+				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+				user-select: none;
 			}
 
 			.section:nth-child(1) .header .main-header p.target {
@@ -160,6 +170,12 @@
 				color: antiquewhite;
 				width: 105vh;
 			}
+
+
+			/* SECTION 2 ------------------------------------------ */
+
+
+			
 		</style>
 	</head>
 	<body>
@@ -190,7 +206,7 @@
 			<div class="section"> <!-- section 1 -->
 				<div class="nav"> <!-- navigation div -->
 					<div class="logo"> <!-- logo -->
-						<img src="./Resources/Images/sfhs_logo.png" alt="SFHS Logo">
+						<img src="./Resources/Images/sfhs_logo.png" alt="SFHS Logo" draggable="false">
 					</div>
 					<div class="nav-bar"> <!-- navigation bar -->
 						<p class="sfhs-beside-logo">SAN FRANCISCO<br>HIGH SCHOOL</p>
