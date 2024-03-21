@@ -215,6 +215,10 @@ body {
     object-fit: cover;
 }
 
+.section:nth-child(2) .slides .slide p {
+    color: antiquewhite;
+}
+
 #r1:checked ~ .select_main {
     margin-left: 0;
 }
