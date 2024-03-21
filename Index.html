@@ -37,6 +37,20 @@
 				src: url("./Resources/Fonts/OpenSans/static/OpenSans-ExtraBold.ttf");
 			}
 
+			::-webkit-scrollbar {
+				background: black;
+				width: 1.7vh;
+			}
+
+			::-webkit-scrollbar-thumb {
+				border-radius: 0.7vh;
+				background: rgb(25, 129, 25);
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
 			body {
 				background: url("./Resources/Images/background.png") no-repeat center fixed;
 				background-size: cover;
@@ -57,7 +71,6 @@
 			}
 
 			.section:nth-child(2) {
-				background: orange;
 				height: 100vh;
 				width: 100%;
 				overflow: hidden;
