@@ -40,11 +40,13 @@
 			::-webkit-scrollbar {
 				background: black;
 				width: 1.7vh;
+				transition: all 1s;
 			}
 
 			::-webkit-scrollbar-thumb {
 				border-radius: 0.7vh;
-				background: rgb(25, 129, 25);
+				background: var(--sb_bg, "linear-gradient(to bottom, rgb(25, 129, 25) 0%, rgb(25, 129, 25) 100%)");
+				transition: all 1s;
 			}
 
 			html {
@@ -211,9 +213,9 @@
 				transition: all 0.3s;
 			}
 
-			.section:nth-child(2) .slides_navbar .slides_bar:hover {
+			/* .section:nth-child(2) .slides_navbar .slides_bar:hover {
 				background: rgb(26, 205, 26);
-			}
+			} */
 
 			.section:nth-child(2) .slides input[name="r"] {
 				position: absolute;
@@ -237,8 +239,164 @@
 				object-fit: cover;
 			}
 
-			.section:nth-child(2) .slides .slide p {
+			.section:nth-child(2) .slides .slide .img-container1  {
+				background: url("./Resources/Images/part_2/Image_1.jpg") no-repeat center;
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container1 .text:first-child {
+				flex: 100%;
+				cursor: default;
+				padding-top: 40vh;
+				padding-right: 15vh;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 7vh;
+				color: rgb(185, 169, 147);
+				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+				text-align: right;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container1 .text:last-child {
+				flex: 100%;
+				cursor: default;
+				padding-bottom: 37vh;
+				padding-left: 82vh;
+				font-family: "OpenSans-Light", sans-serif;
+				font-size: 2vh;
 				color: antiquewhite;
+				text-align: right;
+				width: 55%;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container2  {
+				background: url("./Resources/Images/part_2/Image_2.jpg") no-repeat center;
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container2 .text:first-child {
+				flex: 100%;
+				cursor: default;
+				padding-top: 40vh;
+				padding-left: 10vh;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 7vh;
+				color: rgb(185, 169, 147);
+				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+			}
+
+			.section:nth-child(2) .slides .slide .img-container2 .text:last-child {
+				flex: 100%;
+				cursor: default;
+				padding-bottom: 37vh;
+				padding-left: 10vh;
+				font-family: "OpenSans-Light", sans-serif;
+				font-size: 2vh;
+				color: antiquewhite;
+				width: 55%;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container3  {
+				background: url("./Resources/Images/part_2/Image_3.jpg") no-repeat center;
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container3 .text:first-child {
+				flex: 100%;
+				cursor: default;
+				padding-top: 40vh;
+				padding-right: 15vh;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 7vh;
+				color: rgb(185, 169, 147);
+				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+				text-align: right;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container3 .text:last-child {
+				flex: 100%;
+				cursor: default;
+				padding-bottom: 37vh;
+				padding-left: 82vh;
+				font-family: "OpenSans-Light", sans-serif;
+				font-size: 2vh;
+				color: antiquewhite;
+				text-align: right;
+				width: 55%;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container4  {
+				background: url("./Resources/Images/part_2/Image_4.jpg") no-repeat center;
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container4 .text:first-child {
+				flex: 100%;
+				cursor: default;
+				padding-top: 40vh;
+				padding-left: 10vh;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 7vh;
+				color: rgb(185, 169, 147);
+				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+			}
+
+			.section:nth-child(2) .slides .slide .img-container4 .text:last-child {
+				flex: 100%;
+				cursor: default;
+				padding-bottom: 37vh;
+				padding-left: 10vh;
+				font-family: "OpenSans-Light", sans-serif;
+				font-size: 2vh;
+				color: antiquewhite;
+				width: 55%;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container5  {
+				background: url("./Resources/Images/part_2/Image_5.jpg") no-repeat center;
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container5 .text:first-child {
+				flex: 100%;
+				cursor: default;
+				padding-top: 40vh;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 7vh;
+				color: rgb(185, 169, 147);
+				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+				text-align: center;
+			}
+
+			.section:nth-child(2) .slides .slide .img-container5 .text:last-child {
+				flex: 100%;
+				cursor: default;
+				padding-bottom: 37vh;
+				font-family: "OpenSans-Light", sans-serif;
+				font-size: 2vh;
+				color: antiquewhite;
+				width: 55%;
+				text-align: center;
+				align-self: center;
 			}
 
 			#r1:checked ~ .select_main {
@@ -316,20 +474,34 @@
 					<!-- images -->
 					
 					<div class="slide select_main">
-						<img src="./Resources/Images/part_2/Image_1.jpg" alt="Image_1">
-						<p>test wahahaha</p>
+						<div class="img-container1">
+							<div class="text">DISCOVER, LEARN, GROW</div>
+							<div class="text">At <b>San Francisco High School</b>, we're dedicated to fostering a culture of curiosity and growth. With innovative teaching methods and a dynamic curriculum, we empower students to explore their passions and reach their full potential. Join us on a journey of discovery and personal development, where every day is an opportunity to learn, grow, and make a difference.</div>
+						</div>
 					</div>
 					<div class="slide">
-						<img src="./Resources/Images/part_2/Image_2.jpg" alt="Image_2">
+						<div class="img-container2">
+							<div class="text">WHERE EVERY VOICE MATTERS</div>
+							<div class="text">We believe in valuing every student's voice. Whether in class discussions, creative projects, or community initiatives, we're here to listen and support you. Join us in a welcoming environment where your unique perspective is cherished.</div>
+						</div>
 					</div>
 					<div class="slide">
-						<img src="./Resources/Images/part_2/Image_3.jpg" alt="Image_3">
+						<div class="img-container3">
+							<div class="text">LEARNING SPACES, RESTING PLACES</div>
+							<div class="text">Our school values both active learning and relaxation. That's why we've created comfortable resting areas throughout campus. From cozy corners to serene outdoor spots, students can recharge and gather their thoughts.</div>
+						</div>
 					</div>
 					<div class="slide">
-						<img src="./Resources/Images/part_2/Image_4.jpg" alt="Image_4">
+						<div class="img-container4">
+							<div class="text">NEATNESS BREEDS SUCCESS</div>
+							<div class="text">Our school prioritizes cleanliness to foster discipline, respect, and responsibility among students. By maintaining pristine surroundings, we create an atmosphere conducive to focused learning and cultivate habits that extend beyond the classroom, ultimately paving the way for natural success.</div>
+						</div>
 					</div>
 					<div class="slide">
-						<img src="./Resources/Images/part_2/Image_5.jpg" alt="Image_5">
+						<div class="img-container5">
+							<div class="text">Igniting Passion Through Events</div>
+							<div class="text">In <b>San Francisco High School</b>, events are sparks that ignite passions and fuel ambitions. Each gathering is carefully curated to stimulate curiosity, foster creativity, and encourage collaboration. Join us as we light up the path to success through our vibrant event calendar.</div>
+						</div>
 					</div>
 				</div>
 
@@ -347,6 +519,26 @@
 		</div>
 
 		<script>
+			// For scroll bar
+
+			let lastScrollTop = 0;
+			let lastScrollUpdate = Date.now()
+
+			window.addEventListener("scroll", function() {
+				var check = window.pageYOffset || document.documentElement.scrollTop;
+
+				if (check > lastScrollTop) {
+					lastScrollUpdate = Date.now()
+					document.documentElement.style.setProperty("--sb_bg", "linear-gradient(to bottom, transparent 0%, rgb(25, 129, 25) 100%)");
+				} else if (check < lastScrollTop) {
+					lastScrollUpdate = Date.now()
+					document.documentElement.style.setProperty("--sb_bg", "linear-gradient(to bottom, rgb(25, 129, 25) 0%, transparent 100%)");
+				}
+
+				lastScrollTop = check <= 0 ? 0 : check;
+			});
+
+
 			// For Background Slider in 2nd page
 
 			document.addEventListener("DOMContentLoaded", function() { // run when the website is loaded
@@ -371,7 +563,7 @@
 				});
 
 				function doTask() { // loop function
-					if((Date.now() - time) >= 5000) { // unix time (if now time subtracted to the last background change is more than 5000ms or 5 seconds)
+					if((Date.now() - time) >= 500000) { // if now time subtracted to the last background change is more than 5000ms or 5 seconds
 						time = Date.now(); // reset the time
 						r[current].checked = true; // mark as checked
 
@@ -400,8 +592,13 @@
 							}
 						}
 					}
+					
+					if((Date.now() - lastScrollUpdate) >= 100) { // if now time subtracted to the last time the user scrolled is more than 100ms or 0.1 second
+						lastScrollUpdate = Date.now() // reset the time
+						document.documentElement.style.setProperty("--sb_bg", "linear-gradient(to bottom, rgb(25, 129, 25) 0%, rgb(25, 129, 25) 100%)"); // reset the scrollbar background
+					}
 
-					setTimeout(doTask, 1000); // recall the doTask() function again, simulating the loop function
+					setTimeout(doTask, 100); // recall the doTask() function again, simulating the loop function
 				}
 
 				doTask(); // runs the loop function
