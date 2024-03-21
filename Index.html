@@ -74,13 +74,14 @@
 			}
 
 			.section:nth-child(2) {
-				height: 100vh;
+				margin-top: -5vh;
+				height: 110vh;
 				width: 100%;
 				overflow: hidden;
 			}
 
 			.section:nth-child(3) {
-				height: 110vh;
+				height: 55vh;
 				width: 100%;
 			}
 
@@ -427,19 +428,66 @@
 
 			.section:nth-child(3) .up {
 				background: url("./Resources/Images/part_3/image_1.jpg") no-repeat center fixed;
-				filter: brightness(40%);
 				background-size: cover;
 				width: 100%;
 				height: 50vh;
 				display: flex;
+				flex-direction: row;
+			}
+
+			.section:nth-child(3) .up .mission {
+				flex: 50%;
+				display: flex;
 				flex-direction: column;
+				align-items: center;
+			}
+
+			.section:nth-child(3) .up .mission .title {
+				color: rgb(181, 162, 138);
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 4vh;
+				margin-top: 15vh;
+			}
+
+			.section:nth-child(3) .up .mission .description {
+				color: antiquewhite;
+				font-family: "OpenSans-Lighter", sans-serif;
+				font-size: 2vh;
+				width: 55%;
+				text-align: justify;
+				text-shadow: 0px 50px 50px rgb(0, 0, 0);
+				margin-top: 2vh;
+			}
+
+			.section:nth-child(3) .up .vision {
+				flex: 50%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.section:nth-child(3) .up .vision .title {
+				color: rgb(181, 162, 138);
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 4vh;
+				margin-top: 15vh;
+			}
+
+			.section:nth-child(3) .up .vision .description {
+				color: antiquewhite;
+				font-family: "OpenSans-Lighter", sans-serif;
+				font-size: 2vh;
+				width: 55%;
+				text-align: justify;
+				text-shadow: 0px 50px 50px rgb(0, 0, 0);
+				margin-top: 2vh;
 			}
 
 			.section:nth-child(3) .down {
 				background: rgb(9, 9, 9);
-				margin-top: -50vh;
+				margin-top: -2.55vh;
 				width: 100%;
-				height: 110vh;
+				height: 100%;
 			}
 		</style>
 	</head>
@@ -537,13 +585,22 @@
 				</div>
 			</div>
 			<div class="section">
-				<div class="divider">
-					<div class="up">
-						<p>a</p>
+				<div class="up">
+					<div class="mission">
+						<div class="title">MISSION</div>
+						<div class="description">
+							SFHS is committed to produce quality education to all through relevant curriculum realized by dedicated teachers who are technically competent and as shepherd of the students- mold their minds, hearts and souls for the glory of God.
+						</div>
 					</div>
-					<div class="down">
-						<p>a</p>
+					<div class="vision">
+						<div class="title">VISION</div>
+						<div class="description">
+							SFHS- a school of excellence. envisioning to produce individuals with deep sense of nationalism, who are God fearing, globally competitive and embraced with positive attitudes that will enable them to seek the truth.
+						</div>
 					</div>
+				</div>
+				<div class="down">
+					<p>a</p>
 				</div>
 			</div>
 		</div>
