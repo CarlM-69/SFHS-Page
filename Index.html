@@ -2,248 +2,10 @@
 
 <html>
 	<head>
+		<link rel="stylesheet" href="./Resources/Styles/Index.css">
 		<link rel="icon" type="image/x-icon" href="./Resources/Images/sfhs_logo.png">
 
 		<title>SFHS | Home</title>
-
-		<style>
-			@font-face {
-				font-family: "OpenSans-Light";
-				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Light.ttf");
-			}
-
-			@font-face {
-				font-family: "OpenSans-Regular";
-				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Regular.ttf");
-			}
-
-			@font-face {
-				font-family: "OpenSans-Medium";
-				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Medium.ttf");
-			}
-
-			@font-face {
-				font-family: "OpenSans-Bold";
-				src: url("./Resources/Fonts/OpenSans/static/OpenSans-Bold.ttf");
-			}
-
-			@font-face {
-				font-family: "OpenSans-SemiBold";
-				src: url("./Resources/Fonts/OpenSans/static/OpenSans-SemiBold.ttf");
-			}
-
-			@font-face {
-				font-family: "OpenSans-ExtraBold";
-				src: url("./Resources/Fonts/OpenSans/static/OpenSans-ExtraBold.ttf");
-			}
-
-			body {
-				background: url("./Resources/Images/background.png") no-repeat center fixed;
-				background-size: cover;
-				overflow-x: none;
-				margin-left: 0;
-				margin-right: 0;
-			}
-
-			.container {
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-			}
-
-			.section:nth-child(1) {
-				height: 110vh;
-				width: 100%;
-			}
-
-			.section:nth-child(2) {
-				background: orange;
-				height: 100vh;
-				width: 100%;
-				overflow: hidden;
-			}
-
-			.section:nth-child(3) {
-				background: pink;
-				height: 100vh;
-				width: 100%;
-			}
-
-
-			/* SECTION 1 ------------------------------------------ */
-
-
-			.section:nth-child(1) .nav {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-
-			.section:nth-child(1) .nav .logo {
-				flex: 10%;
-				margin-top: 3vh;
-				margin-left: 3vh;
-			}
-
-			.section:nth-child(1) .nav .logo img {
-				height: 80%;
-				width: 80%;
-				user-select: none;
-			}
-
-			.section:nth-child(1) .nav .nav-bar .sfhs-beside-logo {
-				cursor: default;
-				user-select: none;
-			}
-
-			.section:nth-child(1) .nav .nav-bar {
-				flex: 90%;
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-			}
-
-			.section:nth-child(1) .nav .nav-bar p {
-				flex: 30%;
-				color: antiquewhite;
-				font-family: "OpenSans-ExtraBold", sans-serif;
-				font-size: 3vh;
-			}
-
-			.section:nth-child(1) .nav .nav-bar ul {
-				list-style-type: none;
-				align-self: center;
-				cursor: default;
-				user-select: none;
-			}
-
-			.section:nth-child(1) .nav .nav-bar ul li {
-				display: inline;
-				padding-right: 5vh;
-				font-family: "OpenSans-Medium", sans-serif;
-				font-size: 3vh;
-				user-select: none;
-			}
-
-			.section:nth-child(1) .nav .nav-bar :not(li.active) a {
-				color: antiquewhite;
-				text-decoration: none;
-				transition: color 0.3s;
-			}
-
-			.section:nth-child(1) .nav .nav-bar :not(li.active) a:hover {
-				color: rgb(243, 177, 92);
-			}
-
-			.section:nth-child(1) .nav .nav-bar li.active {
-				color: rgb(181, 162, 138);
-				font-size: 4vh;
-				font-family: "OpenSans-ExtraBold", sans-serif;
-				cursor: default;
-			}
-
-			.section:nth-child(1) .header {
-				margin-top: 35vh;
-				margin-left: 20vh;
-				display: flex;
-				flex-direction: column;
-				cursor: default;
-			}
-
-			.section:nth-child(1) .header .main-header p {
-				display: inline;
-				font-family: "OpenSans-ExtraBold", sans-serif;
-				font-size: 6vh;
-				color: antiquewhite;
-				text-shadow: 0px 0px 25px rgb(0, 0, 0);
-				user-select: none;
-			}
-
-			.section:nth-child(1) .header .main-header p.target {
-				color: transparent;
-				-webkit-text-stroke: 0.2vh rgb(26, 205, 26);
-				transition: all 0.3s;
-			}
-
-			.section:nth-child(1) .header .main-header p.target:hover {
-				color: antiquewhite;
-				-webkit-text-stroke: 0vh antiquewhite;
-			}
-
-			.section:nth-child(1) .header .main-description p {
-				font-family: "OpenSans-Regular", sans-serif;
-				font-size: 2vh;
-				color: antiquewhite;
-				width: 105vh;
-			}
-
-
-			/* SECTION 2 ------------------------------------------ */
-
-
-			.section:nth-child(2) .slides_navbar {
-				position: absolute;
-				bottom: -110vh;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				display: flex;
-			}
-
-			.section:nth-child(2) .slides_navbar .slides_bar {
-				width: 5vh;
-				height: 1vh;
-				border: 0.2vh solid rgb(26, 205, 26);
-				margin: 1vh;
-				cursor: pointer;
-				transition: all 0.3s;
-			}
-
-			.section:nth-child(2) .slides_navbar .slides_bar:hover {
-				background: rgb(26, 205, 26);
-			}
-
-			.section:nth-child(2) .slides input[name="r"] {
-				position: absolute;
-				visibility: hidden;
-			}
-
-			.section:nth-child(2) .slides {
-				width: 500%;
-				height: 100%;
-				display: flex;
-			}
-
-			.section:nth-child(2) .slides .slide {
-				width: 20%;
-				transition: 0.7s;
-			}
-
-			.section:nth-child(2) .slides .slide img {
-				height: 100%;
-				width: 100%;
-				object-fit: cover;
-			}
-
-			#r1:checked ~ .select_main {
-				margin-left: 0;
-			}
-
-			#r2:checked ~ .select_main {
-				margin-left: -20%;
-			}
-
-			#r3:checked ~ .select_main {
-				margin-left: -40%;
-			}
-
-			#r4:checked ~ .select_main {
-				margin-left: -60%;
-			}
-
-			#r5:checked ~ .select_main {
-				margin-left: -80%;
-			}
-		</style>
 	</head>
 	<body>
 		<!--
@@ -252,22 +14,13 @@
 			locations:
 				./Main								- where all the pages stored in
 						./Main/Enroll.html			- the enroll page
-						./Main/News.html			- news and updates from the school page
 						./Main/Contact.html			- where all contact info of the school is displayed
+						./Main/News.html			- news and updates from the school page
 				./Resources							- all resources of the pages are stored in, like images, videos, fonts, and more
-						./Resources/Images			- this is where the images are stored
 						./Resources/Fonts			- fonts location
-
-
-			classes:
-				container 							- the placeholder for all sections
-				section								- parts of the page (we are using pseudo classes to divide each parts without making new classes)
-				nav									- contains logo and navigation bar
-				header								- catchy phrase line from the landing page
-
-				sfhs-beside-logo					- changes the cursor to default when hovering in the text
-				active								- sets the nav button as active button (disables the user from clicking that button we are currently in).
-				target								- changes the text style of the catchy phrase line header
+						./Resources/Images			- this is where the images are stored
+						./Resources/Scripts			- javascript of the webpages
+						./Resources/Styles			- stylesheets of the webpages
 		-->
 		<div class="container"> <!-- sections placeholder -->
 			<div class="section"> <!-- section 1 -->
@@ -305,6 +58,8 @@
 					<input type="radio" name="r" id="r3">
 					<input type="radio" name="r" id="r4">
 					<input type="radio" name="r" id="r5">
+
+					<!-- images -->
 					
 					<div class="slide select_main">
 						<img src="./Resources/Images/part_2/Image_1.jpg" alt="Image_1">
@@ -336,53 +91,6 @@
 			</div>
 		</div>
 
-		<script>
-			// For Background Slider in 2nd page
-
-			document.addEventListener("DOMContentLoaded", function() { // run when the website is loaded
-				var r = document.querySelectorAll("input[name='r']");
-				var slides_bar = document.querySelectorAll(".slides_bar");
-				let time = Date.now();
-				let current = 0;
-
-				slides_bar[0].style.background = "rgb(26, 205, 26)";
-
-				r.forEach(function(rButton, i) { // runs for each button
-					rButton.addEventListener("change", function(selected) {
-						slides_bar.forEach(function(label) { // resets all the button
-							label.style.background = "transparent";
-						});
-
-						slides_bar[i].style.background = "rgb(26, 205, 26)"; // highlight the current background
-						current = i; // set the current background so it wont warp from the previous one
-						time = Date.now(); // reset the time when the user clicks on the button
-					});
-				});
-
-				function doTask() { // loop function
-					if((Date.now() - time) >= 5000) { // unix time (if now time subtracted to the last background change is more than 5000ms or 5 seconds)
-						time = Date.now(); // reset the time
-						r[current].checked = true; // tick as checked
-
-						slides_bar.forEach(function(label) { // resets all the button
-							label.style.background = "transparent";
-						});
-
-						slides_bar[current].style.background = "rgb(26, 205, 26)"; // highlight the current background
-
-						if(current == 4) { // if current background is on the last background
-							current = 0; // then go back to the first one
-						}
-						else { // if there's still background left
-							current += 1; // then proceed to the next background
-						}
-					}
-
-					setTimeout(doTask, 1000); // recall the doTask() function again, simulating the loop function
-				}
-
-				doTask(); // runs the loop function
-			});
-		</script>
+		<script src="./Resources/Scripts/Index.js"></script>
 	</body>
 </html>
