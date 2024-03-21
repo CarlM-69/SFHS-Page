@@ -8,7 +8,8 @@
 
 - Navigation Bar
 - Dynamic Website
-- Smooth Scrolls
+- Image Sliders
+- User-friendly Interface
 - Working Enroll Forms
 
 
