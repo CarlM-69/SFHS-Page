@@ -59,6 +59,7 @@
 				overflow-x: hidden;
 				margin-left: 0;
 				margin-right: 0;
+				margin-bottom: 0;
 			}
 
 			.container {
@@ -79,8 +80,7 @@
 			}
 
 			.section:nth-child(3) {
-				background: pink;
-				height: 100vh;
+				height: 110vh;
 				width: 100%;
 			}
 
@@ -208,14 +208,11 @@
 				width: 5vh;
 				height: 1vh;
 				border: 0.2vh solid rgb(26, 205, 26);
+				background: transparent;
 				margin: 1vh;
 				cursor: pointer;
-				transition: all 0.3s;
+				transition: all 0.5s;
 			}
-
-			/* .section:nth-child(2) .slides_navbar .slides_bar:hover {
-				background: rgb(26, 205, 26);
-			} */
 
 			.section:nth-child(2) .slides input[name="r"] {
 				position: absolute;
@@ -258,6 +255,7 @@
 				color: rgb(185, 169, 147);
 				text-shadow: 0px 0px 25px rgb(0, 0, 0);
 				text-align: right;
+				user-select: none;
 			}
 
 			.section:nth-child(2) .slides .slide .img-container1 .text:last-child {
@@ -290,6 +288,7 @@
 				font-size: 7vh;
 				color: rgb(185, 169, 147);
 				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+				user-select: none;
 			}
 
 			.section:nth-child(2) .slides .slide .img-container2 .text:last-child {
@@ -322,6 +321,7 @@
 				color: rgb(185, 169, 147);
 				text-shadow: 0px 0px 25px rgb(0, 0, 0);
 				text-align: right;
+				user-select: none;
 			}
 
 			.section:nth-child(2) .slides .slide .img-container3 .text:last-child {
@@ -354,6 +354,7 @@
 				font-size: 7vh;
 				color: rgb(185, 169, 147);
 				text-shadow: 0px 0px 25px rgb(0, 0, 0);
+				user-select: none;
 			}
 
 			.section:nth-child(2) .slides .slide .img-container4 .text:last-child {
@@ -385,6 +386,7 @@
 				color: rgb(185, 169, 147);
 				text-shadow: 0px 0px 25px rgb(0, 0, 0);
 				text-align: center;
+				user-select: none;
 			}
 
 			.section:nth-child(2) .slides .slide .img-container5 .text:last-child {
@@ -417,6 +419,27 @@
 
 			#r5:checked ~ .select_main {
 				margin-left: -80%;
+			}
+
+
+			/* SECTION 3 ------------------------------------------ */
+
+
+			.section:nth-child(3) .up {
+				background: url("./Resources/Images/part_3/image_1.jpg") no-repeat center fixed;
+				filter: brightness(40%);
+				background-size: cover;
+				width: 100%;
+				height: 50vh;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.section:nth-child(3) .down {
+				background: rgb(9, 9, 9);
+				margin-top: -50vh;
+				width: 100%;
+				height: 110vh;
 			}
 		</style>
 	</head>
@@ -514,7 +537,14 @@
 				</div>
 			</div>
 			<div class="section">
-				<p>wew</p>
+				<div class="divider">
+					<div class="up">
+						<p>a</p>
+					</div>
+					<div class="down">
+						<p>a</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -563,7 +593,7 @@
 				});
 
 				function doTask() { // loop function
-					if((Date.now() - time) >= 500000) { // if now time subtracted to the last background change is more than 5000ms or 5 seconds
+					if((Date.now() - time) >= 10000) { // if now time subtracted to the last background change is more than 5000ms or 5 seconds
 						time = Date.now(); // reset the time
 						r[current].checked = true; // mark as checked
 
@@ -593,12 +623,12 @@
 						}
 					}
 					
-					if((Date.now() - lastScrollUpdate) >= 100) { // if now time subtracted to the last time the user scrolled is more than 100ms or 0.1 second
+					if((Date.now() - lastScrollUpdate) >= 500) { // if now time subtracted to the last time the user scrolled is more than 100ms or 0.1 second
 						lastScrollUpdate = Date.now() // reset the time
 						document.documentElement.style.setProperty("--sb_bg", "linear-gradient(to bottom, rgb(25, 129, 25) 0%, rgb(25, 129, 25) 100%)"); // reset the scrollbar background
 					}
 
-					setTimeout(doTask, 100); // recall the doTask() function again, simulating the loop function
+					setTimeout(doTask, 500); // recall the doTask() function again, simulating the loop function
 				}
 
 				doTask(); // runs the loop function
