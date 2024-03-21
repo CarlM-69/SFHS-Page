@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="icon" type="image/x-icon" href="../Resources/Images/sfhs_logo.png">
+
+		<title>SFHS | Home</title>
+
+		<style>
+			@font-face {
+				font-family: "OpenSans-Light";
+				src: url("../Resources/Fonts/OpenSans/static/OpenSans-Light.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-Regular";
+				src: url("../Resources/Fonts/OpenSans/static/OpenSans-Regular.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-Medium";
+				src: url("../Resources/Fonts/OpenSans/static/OpenSans-Medium.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-Bold";
+				src: url("../Resources/Fonts/OpenSans/static/OpenSans-Bold.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-SemiBold";
+				src: url("../Resources/Fonts/OpenSans/static/OpenSans-SemiBold.ttf");
+			}
+
+			@font-face {
+				font-family: "OpenSans-ExtraBold";
+				src: url("../Resources/Fonts/OpenSans/static/OpenSans-ExtraBold.ttf");
+			}
+
+			::-webkit-scrollbar {
+				background: black;
+				width: 1.7vh;
+				transition: all 1s;
+			}
+
+			::-webkit-scrollbar-thumb {
+				border-radius: 0.7vh;
+				background: var(--sb_bg, "linear-gradient(to bottom, rgb(25, 129, 25) 0%, rgb(25, 129, 25) 100%)");
+				transition: all 1s;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				background: url("../Resources/Images/background.png") no-repeat center fixed;
+				background-size: cover;
+				overflow-x: hidden;
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 0;
+			}
+
+			.container {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+			}
+
+			.section:nth-child(1) {
+				height: 110vh;
+				width: 100%;
+			}
+
+			.section:nth-child(2) {
+				height: 55vh;
+				width: 100%;
+			}
+
+
+			/* SECTION 1 ------------------------------------------ */
+
+
+			.section:nth-child(1) .nav {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			.section:nth-child(1) .nav .logo {
+				flex: 10%;
+				margin-top: 3vh;
+				margin-left: 3vh;
+			}
+
+			.section:nth-child(1) .nav .logo img {
+				height: 80%;
+				width: 80%;
+				user-select: none;
+			}
+
+			.section:nth-child(1) .nav .nav-bar .sfhs-beside-logo {
+				cursor: default;
+				user-select: none;
+			}
+
+			.section:nth-child(1) .nav .nav-bar {
+				flex: 90%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+
+			.section:nth-child(1) .nav .nav-bar p {
+				flex: 30%;
+				color: antiquewhite;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 3vh;
+			}
+
+			.section:nth-child(1) .nav .nav-bar ul {
+				list-style-type: none;
+				align-self: center;
+				cursor: default;
+				user-select: none;
+			}
+
+			.section:nth-child(1) .nav .nav-bar ul li {
+				display: inline;
+				padding-right: 5vh;
+				font-family: "OpenSans-Medium", sans-serif;
+				font-size: 3vh;
+				user-select: none;
+			}
+
+			.section:nth-child(1) .nav .nav-bar :not(li.active) a {
+				color: antiquewhite;
+				text-decoration: none;
+				transition: color 0.3s;
+			}
+
+			.section:nth-child(1) .nav .nav-bar :not(li.active) a:hover {
+				color: rgb(243, 177, 92);
+			}
+
+			.section:nth-child(1) .nav .nav-bar li.active {
+				color: rgb(181, 162, 138);
+				font-size: 4vh;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				cursor: default;
+			}
+
+
+			/* SECTION 2 ------------------------------------------ */
+
+
+			.section:nth-child(2) .down {
+				background: rgb(9, 9, 9);
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+			}
+
+			.section:nth-child(2) .down .container {
+				flex: 25%;
+				height: 100%;
+				justify-content: unset;
+			}
+
+			.section:nth-child(2) .down .container {
+				align-items: center;
+			}
+
+			.section:nth-child(2) .down .container .title {
+				color: antiquewhite;
+				font-family: "OpenSans-ExtraBold", sans-serif;
+				font-size: 3vh;
+				text-align: center;
+				margin-top: 8vh;
+				margin-bottom: 5vh;
+				cursor: default;
+				user-select: none;
+				width: 60%;
+			}
+
+			.section:nth-child(2) .down .container:not(:nth-child(1)) .title {
+				margin-bottom: 15vh;
+			}
+
+			.section:nth-child(2) .down .container:nth-child(1) img {
+				height: 20vh;
+				width: 20vh;
+				user-select: none;
+			}
+
+			.section:nth-child(2) .down .container .dev {
+				color: antiquewhite;
+				font-family: "OpenSans-Light", sans-serif;
+				font-size: 2.3vh;
+				align-self: baseline;
+				cursor: default;
+			}
+
+			.section:nth-child(2) .down .container:nth-child(2) .dev {
+				margin-left: 14vh;
+			}
+
+			.section:nth-child(2) .down .container:nth-child(2) .dev {
+				margin-left: 11.5vh;
+			}
+
+			.section:nth-child(2) .down .container:nth-child(4) .dev {
+				align-self: center;
+				margin-bottom: 0.5vh;
+				font-size: 3vh;
+			}
+
+			.section:nth-child(2) .down .container:nth-child(4) .dev a:hover {
+				color: rgb(145, 124, 98);
+			}
+
+			.section:nth-child(2) .down .container .dev a {
+				color: rgb(181, 162, 138);
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			Currently, we're at the home page of the website.
+
+			locations:
+				./ 			    					- where all the pages stored in
+						./Enroll.html		    	- the enroll page
+						./Contact.html		    	- where all contact info of the school is displayed
+						./News.html			        - news and updates from the school page
+				../Resources						- all resources of the pages are stored in, like images, videos, fonts, and more
+						../Resources/Fonts			- fonts location
+						../Resources/Images			- this is where the images are stored
+		-->
+
+		<div class="container"> <!-- sections placeholder -->
+			<div class="section" id="home"> <!-- section 1 -->
+				<div class="nav"> <!-- navigation div -->
+					<div class="logo"> <!-- logo -->
+						<img src="../Resources/Images/sfhs_logo.png" alt="SFHS Logo" draggable="false">
+					</div>
+					<div class="nav-bar"> <!-- navigation bar -->
+						<p class="sfhs-beside-logo">SAN FRANCISCO<br>HIGH SCHOOL</p>
+
+						<ul>
+							<li><a href="../Index.html">HOME</a></li>
+							<li><a href="./Enroll.html">ENROLL</a></li>
+							<li class="#home">NEWS</li>
+							<li><a href="./Contact.html"></a>CONTACT</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<div class="down">
+					<div class="container">
+						<div class="title">SAN FRANCISCO HIGH SCHOOL<br>QUEZON CITY</div>
+						<img src="../Resources/Images/sfhs_logo.png" alt="SFHS Logo" draggable="false">
+					</div>
+					<div class="container">
+						<div class="title">CREDITS</div>
+						<div class="dev">Carl Mathew B. Gabay</div>
+						<div class="dev">11 - Perl</div>
+						<div class="dev">FB: <a href="https://www.facebook.com/carlmathewgabay" target="_blank">@carlmathewgabay</a></div>
+						<div class="dev">Git: <a href="https://github.com/CarlM-69" target="_blank">@CarlM-69</a></div>
+					</div>
+					<div class="container">
+						<div class="title">SOCIAL MEDIA</div>
+						<div class="dev">FB: <a href="https://www.facebook.com/" target="_blank">@sanfrancisco_highschool</a></div>
+						<div class="dev">X: <a href="https://www.twitter.com/" target="_blank">@sfhs_official</a></div>
+						<div class="dev">IG: <a href="http://www.instagram.com/" target="_blank">@sfhs_official</a></div>
+					</div>
+					<div class="container">
+						<div class="title">MENU</div>
+						<div class="dev"><a href="../Index.html">HOME</a></div>
+						<div class="dev"><a href="./Enroll.html">ENROLL</a></div>
+						<div class="dev"><a href="#home">NEWS</a></div>
+						<div class="dev"><a href="./Contact.html">CONTACT</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <script>
+			// For scroll bar
+
+			let lastScrollTop = 0;
+			let lastScrollUpdate = Date.now()
+
+			window.addEventListener("scroll", function() {
+				var check = window.pageYOffset || document.documentElement.scrollTop;
+
+				if (check > lastScrollTop) {
+					lastScrollUpdate = Date.now()
+					document.documentElement.style.setProperty("--sb_bg", "linear-gradient(to bottom, transparent 0%, rgb(25, 129, 25) 100%)");
+				} else if (check < lastScrollTop) {
+					lastScrollUpdate = Date.now()
+					document.documentElement.style.setProperty("--sb_bg", "linear-gradient(to bottom, rgb(25, 129, 25) 0%, transparent 100%)");
+				}
+
+				lastScrollTop = check <= 0 ? 0 : check;
+			});
+		</script>
+	</body>
+</html>
