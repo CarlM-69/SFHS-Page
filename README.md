@@ -10,6 +10,7 @@
 - Dynamic Website
 - User-friendly Interface
 - Working Enroll Forms
+- Working Contact Forms
 
 
 ## Authors
