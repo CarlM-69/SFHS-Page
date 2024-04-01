@@ -742,7 +742,7 @@
 				});
 
 				function doTask() { // loop function
-					if((Date.now() - time) >= 7000) { // if now time subtracted to the last background change is more than 7000ms or 7 seconds
+					if((Date.now() - time) >= 5000) { // if now time subtracted to the last background change is more than 7000ms or 7 seconds
 						time = Date.now(); // reset the time
 						r[current].checked = true; // mark as checked
 

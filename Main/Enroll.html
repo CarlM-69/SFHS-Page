@@ -151,6 +151,23 @@
 				cursor: default;
 			}
 
+			.section:nth-child(1) .divider {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.section:nth-child(1) .divider .child:nth-child(1) {
+				background: green;
+				flex: 30%;
+				height: 100vh;
+			}
+
+			.section:nth-child(1) .divider .child:nth-child(2) {
+				background: blue;
+				flex: 70%;
+				height: 100vh;
+			}
+
 
 			/* SECTION 2 ------------------------------------------ */
 
@@ -259,7 +276,16 @@
 					</div>
 				</div>
 
-				hewo
+				<div class="divider">
+					<div class="child">
+
+					</div>
+					<div class="child">
+						<form action="POST">
+							<input type="text">
+						</form>
+					</div>
+				</div>
 			</div>
 			<div class="section">
 				<div class="down">
