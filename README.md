@@ -8,12 +8,15 @@
 
 - Navigation Bar
 - Dynamic Website
-- Image Sliders
 - User-friendly Interface
 - Working Enroll Forms
+- Working Contact Forms
 
 
 ## Authors
 
 - Facebook: [@carlmathewgabay](https://www.facebook.com/carlmathewgabay)
 
+## Will be submitted to:
+
+- Mr. Arturo Pariñas
