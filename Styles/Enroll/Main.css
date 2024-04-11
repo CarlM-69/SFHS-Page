@@ -1,0 +1,189 @@
+body {
+    background: url("../../Resources/Images/background.png") no-repeat center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section:nth-child(1) {
+    height: 110vh;
+    width: 100%;
+}
+
+.section:nth-child(2) {
+    height: 55vh;
+    width: 100%;
+}
+
+
+/* SECTION 1 ------------------------------------------ */
+
+
+.section:nth-child(1) .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section:nth-child(1) .nav .logo {
+    flex: 10%;
+    margin-top: 3vh;
+    margin-left: 3vh;
+}
+
+.section:nth-child(1) .nav .logo img {
+    height: 80%;
+    width: 80%;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar .sfhs-beside-logo {
+    cursor: default;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar {
+    flex: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section:nth-child(1) .nav .nav-bar p {
+    flex: 30%;
+    color: antiquewhite;
+    font-family: "OpenSans-ExtraBold", sans-serif;
+    font-size: 3vh;
+}
+
+.section:nth-child(1) .nav .nav-bar ul {
+    list-style-type: none;
+    align-self: center;
+    cursor: default;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar ul li {
+    display: inline;
+    padding-right: 5vh;
+    font-family: "OpenSans-Medium", sans-serif;
+    font-size: 3vh;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar :not(li.active) a {
+    color: antiquewhite;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.section:nth-child(1) .nav .nav-bar :not(li.active) a:hover {
+    color: rgb(243, 177, 92);
+}
+
+.section:nth-child(1) .nav .nav-bar li.active {
+    color: rgb(181, 162, 138);
+    font-size: 4vh;
+    font-family: "OpenSans-ExtraBold", sans-serif;
+    cursor: default;
+}
+
+.section:nth-child(1) .divider {
+    display: flex;
+    flex-direction: row;
+}
+
+.section:nth-child(1) .divider .child:nth-child(1) {
+    background: green;
+    flex: 30%;
+    height: 100vh;
+}
+
+.section:nth-child(1) .divider .child:nth-child(2) {
+    background: blue;
+    flex: 70%;
+    height: 100vh;
+}
+
+
+/* SECTION 2 ------------------------------------------ */
+
+
+.section:nth-child(2) .down {
+    background: rgb(9, 9, 9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.section:nth-child(2) .down .container {
+    flex: 25%;
+    height: 100%;
+    justify-content: unset;
+}
+
+.section:nth-child(2) .down .container {
+    align-items: center;
+}
+
+.section:nth-child(2) .down .container .title {
+    color: antiquewhite;
+    font-family: "OpenSans-ExtraBold", sans-serif;
+    font-size: 3vh;
+    text-align: center;
+    margin-top: 8vh;
+    margin-bottom: 5vh;
+    cursor: default;
+    user-select: none;
+    width: 60%;
+}
+
+.section:nth-child(2) .down .container:not(:nth-child(1)) .title {
+    margin-bottom: 15vh;
+}
+
+.section:nth-child(2) .down .container:nth-child(1) img {
+    height: 20vh;
+    width: 20vh;
+    user-select: none;
+}
+
+.section:nth-child(2) .down .container .dev {
+    color: antiquewhite;
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 2.3vh;
+    align-self: baseline;
+    cursor: default;
+}
+
+.section:nth-child(2) .down .container:nth-child(2) .dev {
+    margin-left: 14vh;
+}
+
+.section:nth-child(2) .down .container:nth-child(2) .dev {
+    margin-left: 11.5vh;
+}
+
+.section:nth-child(2) .down .container:nth-child(4) .dev {
+    align-self: center;
+    margin-bottom: 0.5vh;
+    font-size: 3vh;
+}
+
+.section:nth-child(2) .down .container:nth-child(4) .dev a:hover {
+    color: rgb(145, 124, 98);
+}
+
+.section:nth-child(2) .down .container .dev a {
+    color: rgb(181, 162, 138);
+    text-decoration: none;
+}

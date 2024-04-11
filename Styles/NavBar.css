@@ -1,0 +1,68 @@
+.section:nth-child(1) .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section:nth-child(1) .nav .logo {
+    flex: 10%;
+    margin-top: 3vh;
+    margin-left: 3vh;
+}
+
+.section:nth-child(1) .nav .logo img {
+    height: 80%;
+    width: 80%;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar .sfhs-beside-logo {
+    cursor: default;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar {
+    flex: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section:nth-child(1) .nav .nav-bar p {
+    flex: 30%;
+    color: antiquewhite;
+    font-family: "OpenSans-ExtraBold", sans-serif;
+    font-size: 3vh;
+}
+
+.section:nth-child(1) .nav .nav-bar ul {
+    list-style-type: none;
+    align-self: center;
+    cursor: default;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar ul li {
+    display: inline;
+    padding-right: 5vh;
+    font-family: "OpenSans-Medium", sans-serif;
+    font-size: 3vh;
+    user-select: none;
+}
+
+.section:nth-child(1) .nav .nav-bar :not(li.active) a {
+    color: antiquewhite;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.section:nth-child(1) .nav .nav-bar :not(li.active) a:hover {
+    color: rgb(243, 177, 92);
+}
+
+.section:nth-child(1) .nav .nav-bar li.active {
+    color: rgb(181, 162, 138);
+    font-size: 4vh;
+    font-family: "OpenSans-ExtraBold", sans-serif;
+    cursor: default;
+}

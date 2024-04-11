@@ -1,0 +1,15 @@
+::-webkit-scrollbar {
+    background: black;
+    width: 1.7vh;
+    transition: all 1s;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.7vh;
+    background: var(--sb_bg, "linear-gradient(to bottom, rgb(25, 129, 25) 0%, rgb(25, 129, 25) 100%)");
+    transition: all 1s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
